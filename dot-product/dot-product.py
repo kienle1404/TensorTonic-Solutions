@@ -4,4 +4,4 @@ def dot_product(x: list, y: list) -> float:
     """
     Returns the dot product as a float.
     """
-    return float(sum([x[i] * y[i] for i in range(len(x))]))
+    return float(sum([i * j for i, j in zip(x, y)]))

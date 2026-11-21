@@ -4,10 +4,9 @@ def matrix_transpose(A: list) -> np.ndarray:
     """
     Returns the transposed matrix as a NumPy array.
     """
-    # Write code here
-    n, m = len(A), len(A[0])
-    res = np.zeros((m, n))
+    m, n = len(A), len(A[0])
+    res = np.zeros((n, m))
     for i in range(m):
         for j in range(n):
-            res[i][j] = A[j][i]
+            res[j][i] = A[i][j]
     return res

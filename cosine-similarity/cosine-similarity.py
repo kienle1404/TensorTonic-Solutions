@@ -7,4 +7,4 @@ def cosine_similarity(a: list, b: list) -> float:
     a, b = np.array(a), np.array(b)
     if not np.linalg.norm(a) * np.linalg.norm(b):
         return 0.0
-    return float((a @ b) / (np.linalg.norm(a) * np.linalg.norm(b)))
+    return float((a @ b) / np.sqrt(a @ a * b @ b))
